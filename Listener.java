@@ -20,19 +20,7 @@ public class Listener extends PluginListener
 	 
 	 
 	 }
-	void Timer() {
-	
-	} 
-             
-	 
-	public void BuildHome(Player p, Block b) {
-		//Doesn't do anything at the moment.
-		
-		 
-		
-	}
-	 
-	 HashMap<String, homes> hashmap = new HashMap<String, homes>();
+	HashMap<String, homes> hashmap = new HashMap<String, homes>();
 	 
 	 Server srv = etc.getServer();
      private Logger log = Logger.getLogger("Minecraft");
@@ -125,25 +113,6 @@ public class Listener extends PluginListener
    
    public boolean onCommand(Player p, Block b, String[] cmd)
    {
-	   if ((cmd[0].equals("/multibuildhome")) || ((cmd[0].equals("/mbh")) && (p.canUseCommand("/multisethome"))))
-	   {
-		  //get x, y, z, and build house. 
-	   p.getX();
-	   p.getY();
-	   p.getZ();
-	   
-	   
-	   
-	   p.getPitch();
-	   p.getRotation();
-	   p.sendMessage("A temporary home has been built.");
-	   BuildHome(p, b);
-	   
-	   return true;
-	   
-	   }
-	   
-	   
 	   if ((cmd[0].equals("/multisethome")) || ((cmd[0].equals("/msh")) && (p.canUseCommand("/multisethome"))))
      {
     	 int which;
