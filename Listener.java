@@ -26,7 +26,7 @@ public class Listener extends PluginListener
              
 	 
 	public void BuildHome(Player p, Block b) {
-		//place block 1 ahead of player
+		//Doesn't do anything at the moment.
 		
 		 
 		
@@ -149,7 +149,7 @@ public class Listener extends PluginListener
     	 int which;
     	 
     	 if (cmd.length != 2) {
-    		  p.sendMessage("¤c'/multisethome' or '/msh' must be followed by 1,2,3,4, or 5");
+    		  p.sendMessage("ï¿½c'/multisethome' or '/msh' must be followed by 1,2,3,4, or 5");
     		 return true;
     	 
     	 
@@ -160,13 +160,13 @@ public class Listener extends PluginListener
     	 
     	 which = Integer.parseInt(cmd[1]);
     	 if (which < 1 || which > 5) {
-    		 p.sendMessage("¤c'/multisethome' or '/msh' must be followed by 1,2,3,4, or 5");
+    		 p.sendMessage("ï¿½c'/multisethome' or '/msh' must be followed by 1,2,3,4, or 5");
     		 return true;
     	 
     	 }
       
 	  
-      p.sendMessage("¤eYour number " + which + " MultiHome has been set to your current location.");
+      p.sendMessage("ï¿½eYour number " + which + " MultiHome has been set to your current location.");
       
       homes h = (homes) hashmap.get(p.getName());
       if (h == null) {
@@ -192,23 +192,23 @@ public class Listener extends PluginListener
     	 int which;
     	 
        	 if (cmd.length != 2) {
-       		 p.sendMessage("¤c'/multihome' or '/mh' must be followed by 1,2,3,4, or 5");
+       		 p.sendMessage("ï¿½c'/multihome' or '/mh' must be followed by 1,2,3,4, or 5");
        		 return true;
        	 }
    	 
        	 which = Integer.parseInt(cmd[1]);
        	 if (which > 5 || which < 1) {
-       		 p.sendMessage("¤c'/multihome' or '/mh' must be followed by 1,2,3,4, or 5");
+       		 p.sendMessage("ï¿½c'/multihome' or '/mh' must be followed by 1,2,3,4, or 5");
        		 return true;
        	 }
     	 
    	 	 homes h = (homes) hashmap.get(p.getName());
    	 	 if (h == null) {
-   	 		 p.sendMessage("¤cYour number " + cmd[1] + " MultiHome Has not been set.");
+   	 		 p.sendMessage("ï¿½cYour number " + cmd[1] + " MultiHome Has not been set.");
    	 		 return true;
    	 	 }
     	 if (h.valid[which] == false){
-    		 p.sendMessage("¤cYour number " + cmd[1] + " MultiHome Has not been set.");
+    		 p.sendMessage("ï¿½cYour number " + cmd[1] + " MultiHome Has not been set.");
     		 return true;
     	 }
    	 	 p.teleportTo(new Location(h.x[which], h.y[which], h.z[which], h.rotation[which], h.pitch[which]));
